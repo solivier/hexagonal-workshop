@@ -1,6 +1,21 @@
 {
+    "behat/behat": {
+        "version": "v3.8.1"
+    },
+    "behat/gherkin": {
+        "version": "v4.6.2"
+    },
+    "behat/transliterator": {
+        "version": "v1.3.0"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.1"
+    },
+    "composer/semver": {
+        "version": "3.2.4"
+    },
+    "composer/xdebug-handler": {
+        "version": "1.4.5"
     },
     "doctrine/annotations": {
         "version": "1.0",
@@ -81,6 +96,42 @@
     "egulias/email-validator": {
         "version": "2.1.24"
     },
+    "friends-of-behat/symfony-extension": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "3d21344765fd3440a85bdd27d4cada186ec628bd"
+        },
+        "files": [
+            "behat.yml.dist",
+            "config/services_test.yaml",
+            "features/demo.feature",
+            "tests/Behat/DemoContext.php"
+        ]
+    },
+    "friendsofphp/php-cs-fixer": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.2",
+            "ref": "cc05ab6abf6894bddb9bbd6a252459010ebe040b"
+        },
+        "files": [
+            ".php_cs.dist"
+        ]
+    },
+    "laminas/laminas-code": {
+        "version": "3.5.0"
+    },
+    "laminas/laminas-eventmanager": {
+        "version": "3.3.0"
+    },
+    "laminas/laminas-zendframework-bridge": {
+        "version": "1.1.1"
+    },
     "monolog/monolog": {
         "version": "2.1.1"
     },
@@ -90,6 +141,12 @@
     "ocramius/proxy-manager": {
         "version": "2.2.3"
     },
+    "php-cs-fixer/diff": {
+        "version": "v1.3.1"
+    },
+    "php-ds/php-ds": {
+        "version": "v1.3.0"
+    },
     "phpdocumentor/reflection-common": {
         "version": "2.2.0"
     },
@@ -98,6 +155,24 @@
     },
     "phpdocumentor/type-resolver": {
         "version": "1.4.0"
+    },
+    "phpspec/php-diff": {
+        "version": "v1.1.3"
+    },
+    "phpspec/phpspec": {
+        "version": "6.3.0"
+    },
+    "phpspec/prophecy": {
+        "version": "1.12.1"
+    },
+    "phpstan/extension-installer": {
+        "version": "1.0.5"
+    },
+    "phpstan/phpstan": {
+        "version": "0.12.56"
+    },
+    "phpstan/phpstan-doctrine": {
+        "version": "0.12.22"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -114,6 +189,18 @@
     "psr/log": {
         "version": "1.1.3"
     },
+    "sebastian/comparator": {
+        "version": "4.0.6"
+    },
+    "sebastian/diff": {
+        "version": "4.0.4"
+    },
+    "sebastian/exporter": {
+        "version": "4.0.3"
+    },
+    "sebastian/recursion-context": {
+        "version": "4.0.4"
+    },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
         "recipe": {
@@ -125,6 +212,9 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "symfony/amqp-messenger": {
+        "version": "v5.1.8"
     },
     "symfony/asset": {
         "version": "v5.1.8"
@@ -178,6 +268,9 @@
         "version": "v2.2.0"
     },
     "symfony/doctrine-bridge": {
+        "version": "v5.1.8"
+    },
+    "symfony/doctrine-messenger": {
         "version": "v5.1.8"
     },
     "symfony/dom-crawler": {
@@ -275,6 +368,18 @@
             "ref": "fadbfe33303a76e25cb63401050439aa9b1a9c7f"
         }
     },
+    "symfony/messenger": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "e9a414b113ceadbf4e52abe37bf8f1b443f06ccb"
+        },
+        "files": [
+            "config/packages/messenger.yaml"
+        ]
+    },
     "symfony/mime": {
         "version": "v5.1.8"
     },
@@ -360,6 +465,12 @@
         "version": "v5.1.8"
     },
     "symfony/property-info": {
+        "version": "v5.1.8"
+    },
+    "symfony/proxy-manager-bridge": {
+        "version": "v5.1.8"
+    },
+    "symfony/redis-messenger": {
         "version": "v5.1.8"
     },
     "symfony/routing": {
@@ -499,13 +610,10 @@
     "twig/twig": {
         "version": "v3.1.1"
     },
+    "webimpress/safe-writer": {
+        "version": "2.1.0"
+    },
     "webmozart/assert": {
         "version": "1.9.1"
-    },
-    "zendframework/zend-code": {
-        "version": "3.4.1"
-    },
-    "zendframework/zend-eventmanager": {
-        "version": "3.2.1"
     }
 }

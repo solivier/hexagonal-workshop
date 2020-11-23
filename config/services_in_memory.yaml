@@ -1,0 +1,9 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\Tests\BookStore\Acceptance\Context\:
+        resource: '%kernel.project_dir%/tests/BookStore/Acceptance/Context/**/*.php'
+
+    App\Tests\Store: ~

@@ -2,7 +2,7 @@
     "type": "project",
     "license": "proprietary",
     "require": {
-        "php": ">=7.2.5",
+        "php": ">=7.4.1",
         "ext-ctype": "*",
         "ext-iconv": "*",
         "composer/package-versions-deprecated": "1.11.99.1",
@@ -37,7 +37,9 @@
         "symfony/web-link": "5.1.*",
         "symfony/yaml": "5.1.*",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "symfony/messenger": "5.1.*",
+        "php-ds/php-ds": "^1.2"
     },
     "require-dev": {
         "symfony/browser-kit": "^5.1",
@@ -47,7 +49,14 @@
         "symfony/phpunit-bridge": "^5.1",
         "symfony/stopwatch": "^5.1",
         "symfony/var-dumper": "^5.1",
-        "symfony/web-profiler-bundle": "^5.1"
+        "symfony/web-profiler-bundle": "^5.1",
+        "behat/behat": "^3.5",
+        "friends-of-behat/symfony-extension": "^2.0",
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpspec/phpspec": "^6.1",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan": "^0.12.2",
+        "phpstan/phpstan-doctrine": "^0.12.5"
     },
     "config": {
         "optimize-autoloader": true,

@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\Tests\BookStore\EndToEnd\Api\Context\:
+        resource: '%kernel.project_dir%/tests/BookStore/EndToEnd/Api/Context/**/*.php'
+
+    App\Tests\Store: ~
+    App\Tests\DatabasePurger: ~

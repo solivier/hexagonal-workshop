@@ -1,0 +1,7 @@
+suites:
+  BookStore:
+    namespace: Api\BookStore
+    psr4_prefix: Api\BookStore
+    spec_path: tests/BookStore
+    src_path: src/BookStore
+    spec_prefix: Specification

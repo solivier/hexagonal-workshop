@@ -1,0 +1,25 @@
+book_store_acceptance:
+    extensions:
+        FriendsOfBehat\SymfonyExtension: ~
+    suites:
+        default:
+            paths:
+                - '%paths.base%/../../../features'
+            contexts:
+                - 'App\Tests\BookStore\Acceptance\Context\BookStoreContext'
+            filters:
+                tags: '@acceptance&&~@skip'
+
+book_store_end_to_end_api:
+    suites:
+        default:
+            paths:
+                - '%paths.base%/../../../features'
+            contexts:
+                - 'App\Tests\BookStore\EndToEnd\Api\Context\BookStoreContext'
+                - 'App\Tests\BookStore\EndToEnd\Api\Context\DatabaseContext'
+            filters:
+                tags: '@end-to-end-api&&~@skip'
+
+            extensions:
+                FriendsOfBehat\SymfonyExtension: ~
