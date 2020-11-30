@@ -32,4 +32,34 @@ class Book
     {
         return new self($id, $isbn, $title, $description, $author, $publicationDate);
     }
+
+    public function getId(): BookId
+    {
+        return $this->id;
+    }
+
+    public function getIsbn(): Isbn
+    {
+        return $this->isbn;
+    }
+
+    public function getTitle(): Title
+    {
+        return $this->title;
+    }
+
+    public function getDescription(): Description
+    {
+        return $this->description;
+    }
+
+    public function getAuthor(): Author
+    {
+        return $this->author;
+    }
+
+    public function getPublicationDate(): PublicationDate
+    {
+        return $this->publicationDate;
+    }
 }
