@@ -1,3 +1,13 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+
+add_a_book:
+    path: /api/book/add
+    defaults: {_controller: App\BookStore\Infrastructure\UserInterface\Web\AddABookController, _format: json}
+    methods: [POST]
+
+get_a_book:
+    path: /api/book/get
+    defaults: {_controller: App\BookStore\Infrastructure\UserInterface\Web\GetABookController, _format: json}
+    methods: [GET]
