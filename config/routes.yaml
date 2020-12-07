@@ -8,6 +8,6 @@ add_a_book:
     methods: [POST]
 
 get_a_book:
-    path: /api/book/get
+    path: /api/book/get/{title}
     defaults: {_controller: App\BookStore\Infrastructure\UserInterface\Web\GetABookController, _format: json}
     methods: [GET]

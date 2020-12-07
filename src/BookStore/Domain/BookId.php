@@ -3,8 +3,9 @@
 
 namespace App\BookStore\Domain;
 
-use Cassandra\Uuid;
-use Cassandra\UuidInterface;
+
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 
 class BookId
 {

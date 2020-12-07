@@ -25,7 +25,7 @@ class Isbn
         return new self($isbn);
     }
 
-    public function toString(): self
+    public function toString(): string
     {
         return $this->isbn;
     }
