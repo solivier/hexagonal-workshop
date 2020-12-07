@@ -4,8 +4,9 @@ namespace App\BookStore\Application;
 
 use App\BookStore\Domain\BookRepository;
 use App\BookStore\Domain\Title;
+use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-class GetABookByTitleHandler
+class GetABookByTitleHandler implements MessageHandlerInterface
 {
     private BookRepository $bookRepository;
 

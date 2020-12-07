@@ -10,8 +10,9 @@ use App\BookStore\Domain\Description;
 use App\BookStore\Domain\Isbn;
 use App\BookStore\Domain\PublicationDate;
 use App\BookStore\Domain\Title;
+use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
-class AddBookHandler
+class AddBookHandler implements MessageHandlerInterface
 {
     private BookRepository $bookRepository;
 
