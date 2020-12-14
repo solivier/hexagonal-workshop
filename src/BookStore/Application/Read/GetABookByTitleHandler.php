@@ -33,11 +33,12 @@ class GetABookByTitleHandler
 
     public function __invoke(GetABookByTitleCommand $getABookByTitleCommand): array
     {
+
         $stmt = $this->entityManager
             ->getConnection()
-            ->prepare("SELECT isbn, title, author from book_doctrine_entity WHERE title = :title")
-            ->bindValue('title',  $getABookByTitleCommand->title);
-        dd($stmt);
+            ->prepare("SELECT isbn, title, author from book_doctrine_entity WHERE title = :title");
+        $stmt->bindValue("title", $getABookByTitleCommand->title);
+        $stmt->execute();
         return $stmt->fetchAll();
     }
 }

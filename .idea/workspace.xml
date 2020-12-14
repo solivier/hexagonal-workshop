@@ -20,26 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c5e0b0af-2ed4-4e94-93e6-2c6461f6f781" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookStore/Application/Read/GetABookByTitleCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookStore/Infrastructure/Bus/CommandBus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookStore/Infrastructure/Bus/QueryBus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookStore/Infrastructure/Command.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookStore/Infrastructure/Query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookStore/Infrastructure/Storage/Doctrine/Repository/Book/BookRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hexagonal-workshop.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hexagonal-workshop.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/messenger.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/messenger.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookStore/Application/AddBookCommand.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore/Application/Write/AddBookCommand.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookStore/Application/AddBookHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore/Application/Write/AddBookHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookStore/Application/BookViewModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore/Application/Read/BookViewModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookStore/Application/GetABookByTitleCommand.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookStore/Application/GetABookByTitleHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore/Application/Read/GetABookByTitleHandler.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookStore/Infrastructure/Storage/InMemoryBookRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore/Infrastructure/Storage/InMemoryBookRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookStore/Infrastructure/UserInterface/Web/AddABookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore/Infrastructure/UserInterface/Web/AddABookController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookStore/Infrastructure/UserInterface/Web/GetABookController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore/Infrastructure/UserInterface/Web/GetABookController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BookStore/Application/Read/GetABookByTitleHandler.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookStore/Application/Read/GetABookByTitleHandler.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +208,7 @@
       <workItem from="1607342090610" duration="12232000" />
       <workItem from="1607504636465" duration="17000" />
       <workItem from="1607719619710" duration="6845000" />
-      <workItem from="1607936431441" duration="8201000" />
+      <workItem from="1607936431441" duration="9709000" />
     </task>
     <task id="LOCAL-00001" summary="Commit workshop">
       <created>1607353424938</created>
