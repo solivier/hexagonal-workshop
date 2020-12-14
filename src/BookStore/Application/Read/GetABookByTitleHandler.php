@@ -39,6 +39,6 @@ class GetABookByTitleHandler
             ->prepare("SELECT isbn, title, author from book_doctrine_entity WHERE title = :title");
         $stmt->bindValue("title", $getABookByTitleCommand->title);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetchAllAssociative();
     }
 }
