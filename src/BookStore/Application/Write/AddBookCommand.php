@@ -1,10 +1,11 @@
 <?php
 
 
-namespace App\BookStore\Application;
+namespace App\BookStore\Application\Write;
 
+use App\BookStore\Infrastructure\Command;
 
-class AddBookCommand
+class AddBookCommand implements Command
 {
     public string $title;
     public string $description;

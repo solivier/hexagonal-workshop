@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\BookStore\Application;
+namespace App\BookStore\Application\Read;
 
 
 class BookViewModel

@@ -4,33 +4,33 @@
 namespace App\BookStore\Infrastructure\UserInterface\Web;
 
 
-use App\BookStore\Application\GetABookByTitleCommand;
+use App\BookStore\Application\Read\GetABookByTitleCommand;
+use App\BookStore\Infrastructure\Bus\QueryBus;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Messenger\MessageBusInterface;
 use Symfony\Component\Messenger\Stamp\HandledStamp;
 
 class GetABookController
 {
-    private MessageBusInterface $bus;
+    private QueryBus $bus;
 
     /**
      * GetABookController constructor.
-     * @param MessageBusInterface $bus
+     * @param QueryBus $bus
      */
-    public function __construct(MessageBusInterface $bus)
+    public function __construct(QueryBus $bus)
     {
         $this->bus = $bus;
     }
 
     public function __invoke(Request $request): JsonResponse
     {
-        $command = new GetABookByTitleCommand();
-        $command->title = (string) $request->get('title');
+        $query = new GetABookByTitleCommand();
+        $query->title = (string) $request->get('title');
 
-        $book = $this->bus->dispatch($command);
+        $book = $this->bus->fetch($query);
 
-        return new JsonResponse($book->last(HandledStamp::class)->getResult(), Response::HTTP_ACCEPTED);
+        return new JsonResponse($book, Response::HTTP_ACCEPTED);
     }
 }

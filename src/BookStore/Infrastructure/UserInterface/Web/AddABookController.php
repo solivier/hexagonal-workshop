@@ -4,21 +4,21 @@
 namespace App\BookStore\Infrastructure\UserInterface\Web;
 
 
-use App\BookStore\Application\AddBookCommand;
+use App\BookStore\Application\Write\AddBookCommand;
+use App\BookStore\Infrastructure\Bus\CommandBus;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Messenger\MessageBusInterface;
 
 final class AddABookController
 {
-    private MessageBusInterface $bus;
+    private CommandBus $bus;
 
     /**
      * AddABookController constructor.
-     * @param MessageBusInterface $bus
+     * @param CommandBus $bus
      */
-    public function __construct(MessageBusInterface $bus)
+    public function __construct(CommandBus $bus)
     {
         $this->bus = $bus;
     }

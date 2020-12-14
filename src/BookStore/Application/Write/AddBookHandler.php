@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\BookStore\Application;
+namespace App\BookStore\Application\Write;
 
 use App\BookStore\Domain\Book;
 use App\BookStore\Domain\BookId;
@@ -11,9 +11,9 @@ use App\BookStore\Domain\Isbn;
 use App\BookStore\Domain\PublicationDate;
 use App\BookStore\Domain\Title;
 use App\BookStore\Domain\Author;
-use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
+use App\BookStore\Infrastructure\Command;
 
-class AddBookHandler implements MessageHandlerInterface
+class AddBookHandler
 {
     private BookRepository $bookRepository;
 

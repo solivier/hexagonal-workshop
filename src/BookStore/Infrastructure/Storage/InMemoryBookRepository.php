@@ -25,6 +25,7 @@ final class InMemoryBookRepository implements BookRepository
 
     public function getFromTitle(Title $title): ?Book
     {
+        /*
         $id = BookId::generate();
         $book = Book::create(
             $id,
@@ -35,6 +36,7 @@ final class InMemoryBookRepository implements BookRepository
             PublicationDate::fromString('2020-12-07 09:00:00'),
         );
         $this->books[$id->toString()] = $book;
+        */
 
         $result = array_filter($this->books, function(Book $book) use ($title) {
             return $book->getTitle()->toString() === $title->toString();

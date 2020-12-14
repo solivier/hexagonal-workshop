@@ -4,14 +4,24 @@ services:
         autoconfigure: true
 
     App\BookStore\Domain\BookRepository:
-        class: 'App\BookStore\Infrastructure\Storage\InMemoryBookRepository'
+        class: 'App\BookStore\Infrastructure\Storage\Doctrine\Repository\Book\BookRepository'
+
+    App\BookStore\Infrastructure\Bus\CommandBus: ~
+    App\BookStore\Infrastructure\Bus\QueryBus: ~
 
     command_handler:
-        namespace: App\BookStore\Application\
-        resource: '%kernel.project_dir%/src/BookStore/Application/*Handler.php'
+        namespace: App\BookStore\Application\Write\
+        resource: '%kernel.project_dir%/src/BookStore/Application/Write/*Handler.php'
         autoconfigure: false
         tags:
-            - { name: messenger.message_handler, bus: messenger.bus.default }
+            - { name: messenger.message_handler, bus: command.bus }
+
+    query_handler:
+        namespace: App\BookStore\Application\Read\
+        resource: '%kernel.project_dir%/src/BookStore/Application/Read/*Handler.php'
+        autoconfigure: false
+        tags:
+            - { name: messenger.message_handler, bus: query.bus }
 
     controllers:
         namespace: App\BookStore\Infrastructure\UserInterface\Web\
