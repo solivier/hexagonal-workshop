@@ -39,7 +39,9 @@
         "twig/extra-bundle": "^2.12|^3.0",
         "twig/twig": "^2.12|^3.0",
         "symfony/messenger": "5.1.*",
-        "php-ds/php-ds": "^1.2"
+        "php-ds/php-ds": "^1.2",
+        "ramsey/uuid": "^3.9.3",
+        "ext-json": "*"
     },
     "require-dev": {
         "symfony/browser-kit": "^5.1",

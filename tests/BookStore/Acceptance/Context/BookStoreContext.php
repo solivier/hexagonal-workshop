@@ -4,17 +4,23 @@ declare(strict_types=1);
 
 namespace App\Tests\BookStore\Acceptance\Context;
 
+use App\BookStore\Application\AddBookCommand;
+use App\BookStore\Application\GetABookByTitleCommand;
 use App\Tests\Store;
 use Behat\Behat\Context\Context;
 use Behat\Behat\Tester\Exception\PendingException;
+use Symfony\Component\Messenger\MessageBusInterface;
+use Webmozart\Assert\Assert;
 
 final class BookStoreContext implements Context
 {
     private Store $store;
+    private MessageBusInterface $bus;
 
-    public function __construct(Store $store)
+    public function __construct(Store $store, MessageBusInterface $bus)
     {
         $this->store = $store;
+        $this->bus = $bus;
     }
 
     /**
@@ -22,15 +28,22 @@ final class BookStoreContext implements Context
      */
     public function iAmConnectedAsABookSeller()
     {
-        throw new PendingException();
+        return true;
     }
 
     /**
-     * @Given I add a new book in the store named :arg1 by author :arg2 published on :arg3 at the price of :arg4 euros
+         * @Given I add a new book in the store named :title by author :author published on :date at the price of :price euros
      */
-    public function iAddANewBookInTheStoreNamedByAuthorPublishedOnAtThePriceOfEuros($arg1, $arg2, $arg3, $arg4)
+    public function iAddANewBookInTheStoreNamedByAuthorPublishedOnAtThePriceOfEuros($title, $author, $date, $price)
     {
-        throw new PendingException();
+        $addBookCommand = new AddBookCommand();
+        $addBookCommand->title = $title;
+        $addBookCommand->author = $author;
+        $addBookCommand->publicationDate = $date;
+
+        $this->store->set('book_title', $title);
+
+        $this->bus->dispatch($addBookCommand);
     }
 
     /**
@@ -38,7 +51,12 @@ final class BookStoreContext implements Context
      */
     public function iShouldSeeTheBookInTheStore()
     {
-        throw new PendingException();
+        $getABookByTitleCommand = new GetABookByTitleCommand();
+        $getABookByTitleCommand->title = $this->store->get('book_title');
+
+        $book = $this->bus->dispatch($getABookByTitleCommand);
+
+        Assert::eq($book->getTitle()->toString(), $this->store->get('book_title'));
     }
 
     /**
@@ -46,7 +64,7 @@ final class BookStoreContext implements Context
      */
     public function iAmConnectedAsABookBuyer()
     {
-        throw new PendingException();
+        return true;
     }
 
     /**

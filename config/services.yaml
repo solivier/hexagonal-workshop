@@ -2,3 +2,20 @@ services:
     _defaults:
         autowire: true
         autoconfigure: true
+
+    App\BookStore\Domain\BookRepository:
+        class: 'App\BookStore\Infrastructure\Storage\InMemoryBookRepository'
+
+    command_handlers:
+        namespace: App\BookStore\Application\
+        resource: '%kernel.project_dir%/src/BookStore/Application/*Handler.php'
+        autoconfigure: false
+        tags:
+            - { name: messenger.message_handler, bus: messenger.bus.default }
+
+    controllers:
+        namespace: App\BookStore\Infrastructure\UserInterface\Web\
+        resource: '%kernel.project_dir%/src/BookStore/Infrastructure/UserInterface/Web/*Controller.php'
+        public: true
+        tags:
+            - { name: controller.service_arguments }

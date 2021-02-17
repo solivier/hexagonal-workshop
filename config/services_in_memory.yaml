@@ -6,4 +6,7 @@ services:
     App\Tests\BookStore\Acceptance\Context\:
         resource: '%kernel.project_dir%/tests/BookStore/Acceptance/Context/**/*.php'
 
+    App\BookStore\Domain\BookRepository:
+        class: 'App\BookStore\Infrastructure\Storage\InMemoryBookRepository'
+
     App\Tests\Store: ~
