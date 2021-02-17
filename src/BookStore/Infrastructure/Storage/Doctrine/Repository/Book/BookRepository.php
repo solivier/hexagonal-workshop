@@ -1,12 +1,11 @@
 <?php
 
-
 namespace App\BookStore\Infrastructure\Storage\Doctrine\Repository\Book;
 
 use App\BookStore\Domain\Author;
 use App\BookStore\Domain\Book;
 use App\BookStore\Domain\BookId;
-use \App\BookStore\Domain\BookRepository as BookRepositoryInterface;
+use App\BookStore\Domain\BookRepository as BookRepositoryInterface;
 use App\BookStore\Domain\Description;
 use App\BookStore\Domain\Isbn;
 use App\BookStore\Domain\PublicationDate;
@@ -18,10 +17,6 @@ class BookRepository implements BookRepositoryInterface
 {
     private EntityManagerInterface $entityManager;
 
-    /**
-     * BookRepository constructor.
-     * @param EntityManagerInterface $entityManager
-     */
     public function __construct(EntityManagerInterface $entityManager)
     {
         $this->entityManager = $entityManager;
@@ -34,7 +29,6 @@ class BookRepository implements BookRepositoryInterface
         if (null === $book) {
             return null;
         }
-
 
         return Book::create(
             BookId::fromString($book->getId()),
@@ -84,5 +78,4 @@ class BookRepository implements BookRepositoryInterface
 
         $this->entityManager->remove($book);
     }
-
 }

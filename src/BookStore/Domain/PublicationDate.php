@@ -1,18 +1,14 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\BookStore\Domain;
-
 
 class PublicationDate
 {
     private \DateTimeImmutable $date;
 
-    /**
-     * PublicationDate constructor.
-     * @param \DateTimeImmutable $date
-     */
-    public function __construct(\DateTimeImmutable $date)
+    private function __construct(\DateTimeImmutable $date)
     {
         $this->date = $date;
     }

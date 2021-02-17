@@ -1,18 +1,16 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\BookStore\Domain;
 
+use App\BookStore\Domain\Exception\InvalidIsbnException;
 
 class Isbn
 {
     private string $isbn;
 
-    /**
-     * Isbn constructor.
-     * @param string $isbn
-     */
-    public function __construct(string $isbn)
+    private function __construct(string $isbn)
     {
         if (!$this->checkIfIsbn($isbn)) {
             throw new InvalidIsbnException($isbn);

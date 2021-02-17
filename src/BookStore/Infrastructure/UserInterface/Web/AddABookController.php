@@ -1,8 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\BookStore\Infrastructure\UserInterface\Web;
-
 
 use App\BookStore\Application\Write\AddBookCommand;
 use App\BookStore\Infrastructure\Bus\CommandBus;
@@ -14,10 +14,6 @@ final class AddABookController
 {
     private CommandBus $bus;
 
-    /**
-     * AddABookController constructor.
-     * @param CommandBus $bus
-     */
     public function __construct(CommandBus $bus)
     {
         $this->bus = $bus;

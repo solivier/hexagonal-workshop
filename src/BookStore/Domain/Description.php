@@ -1,17 +1,13 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\BookStore\Domain;
-
 
 class Description
 {
     private string $value;
 
-    /**
-     * Description constructor.
-     * @param string $value
-     */
     private function __construct(string $value)
     {
         $this->value = $value;

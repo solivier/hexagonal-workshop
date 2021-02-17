@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace App\BookStore\Infrastructure\Bus;
 
-
 use App\BookStore\Infrastructure\Command;
 use Symfony\Component\Messenger\HandleTrait;
 use Symfony\Component\Messenger\MessageBusInterface;

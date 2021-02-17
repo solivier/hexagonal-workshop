@@ -1,24 +1,17 @@
 <?php
 
-
 namespace App\BookStore\Infrastructure\UserInterface\Web;
-
 
 use App\BookStore\Application\Read\GetABookByTitleCommand;
 use App\BookStore\Infrastructure\Bus\QueryBus;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Messenger\Stamp\HandledStamp;
 
 class GetABookController
 {
     private QueryBus $bus;
 
-    /**
-     * GetABookController constructor.
-     * @param QueryBus $bus
-     */
     public function __construct(QueryBus $bus)
     {
         $this->bus = $bus;

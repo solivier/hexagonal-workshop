@@ -1,8 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
 namespace App\BookStore\Application\Read;
-
 
 class BookViewModel
 {
@@ -11,13 +11,6 @@ class BookViewModel
     public string $author;
     public string $description;
 
-    /**
-     * BookViewModel constructor.
-     * @param string $isbn
-     * @param string $title
-     * @param string $author
-     * @param string $description
-     */
     public function __construct(string $isbn, string $title, string $author, string $description)
     {
         $this->isbn = $isbn;
@@ -25,5 +18,4 @@ class BookViewModel
         $this->author = $author;
         $this->description = $description;
     }
-
 }

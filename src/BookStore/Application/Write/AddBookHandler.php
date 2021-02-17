@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\BookStore\Application\Write;
 
 use App\BookStore\Domain\Book;
@@ -11,16 +10,11 @@ use App\BookStore\Domain\Isbn;
 use App\BookStore\Domain\PublicationDate;
 use App\BookStore\Domain\Title;
 use App\BookStore\Domain\Author;
-use App\BookStore\Infrastructure\Command;
 
 class AddBookHandler
 {
     private BookRepository $bookRepository;
 
-    /**
-     * AddBookHandler constructor.
-     * @param BookRepository $bookRepository
-     */
     public function __construct(BookRepository $bookRepository)
     {
         $this->bookRepository = $bookRepository;
@@ -38,5 +32,4 @@ class AddBookHandler
         );
         $this->bookRepository->save($book);
     }
-
 }

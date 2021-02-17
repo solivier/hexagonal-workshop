@@ -1,16 +1,12 @@
 <?php
 
-
+declare(strict_types=1);
 
 namespace App\BookStore\Infrastructure\Storage;
 
-use App\BookStore\Domain\Author;
 use App\BookStore\Domain\Book;
 use App\BookStore\Domain\BookId;
 use App\BookStore\Domain\BookRepository;
-use App\BookStore\Domain\Description;
-use App\BookStore\Domain\Isbn;
-use App\BookStore\Domain\PublicationDate;
 use App\BookStore\Domain\Title;
 
 final class InMemoryBookRepository implements BookRepository
@@ -59,5 +55,4 @@ final class InMemoryBookRepository implements BookRepository
         $bookId = array_pop($result)->getId()->toString();
         unset($this->books[$bookId]);
     }
-
 }
