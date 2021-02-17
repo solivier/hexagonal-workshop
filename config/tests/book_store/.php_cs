@@ -1,7 +1,7 @@
 <?php
 
 $rootDirectory = sprintf('%s/../../..', __DIR__);
-$contextDirectory = sprintf('%s/src/CustomerRelation', $rootDirectory);
+$contextDirectory = sprintf('%s/src/', $rootDirectory);
 
 $finder = PhpCsFixer\Finder::create()
     ->in($contextDirectory)
